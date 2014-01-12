@@ -46,6 +46,7 @@ public class MilaFormulesTest {
 		assertEquals("4.0", MilaFormules.sum(testarli2));
 		assertNotSame("100.0", MilaFormules.sum(testarli1));
 		assertNotSame("15.0", MilaFormules.sum(testarli2));
+		
 	}
 	
 
