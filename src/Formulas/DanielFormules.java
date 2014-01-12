@@ -74,7 +74,6 @@ public class DanielFormules {
 		} else {
 			throw new IllegalArgumentException("Please use a number as base");
 		}
-
 		return Double.toString(Math.pow(base, power));
 	}
 
