@@ -50,18 +50,23 @@ public class MilaFormules {
 		if(input.get(0) instanceof Integer || input.get(0) instanceof Double)
 		{
 			double criteria = (double)input.get(0);
+			if(input.size()<2)
+			{
+				throw new IllegalArgumentException("Please select at least two cells for the SUMIF function");
+			}
 			
 			for(Object number: input)
 			{
 	//			Do we want our methods to ignore when something other than int's or double's is selected? Or shall we throw an Exception?
 	
-				if(number instanceof Integer || number instanceof Double)
+				if(!(number instanceof Integer || number instanceof Double))
 				{
 					throw new IllegalArgumentException("Please select only cells containing numbers!");
 				}
 				
-				if(((number instanceof Integer || number instanceof Double)))
+				if(number instanceof Integer || number instanceof Double)
 				{
+					// TODO CASTEN NIET GOED
 					if((double)number == criteria)
 					result = result + (double)number;
 				}
